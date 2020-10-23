@@ -10,7 +10,7 @@ results = []
 
 puts 'Loading projects from GitLab. This might take a while...'
 
-# per_page: 1 is to avoid timeout issues with some projects on EIPM Gitlab
+# per_page: 1 is to avoid timeout issues with some projects on Gitlab
 Gitlab.projects(per_page: 1).auto_paginate { |p| projects << p }
 
 puts "Final project count: #{projects.count}"
